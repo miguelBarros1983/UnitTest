@@ -6,13 +6,14 @@ using Testes_Unitarios;
 
 namespace CalculadoraTest
 {
-    //
     [TestClass]
     public class UnitTest1
     {
         private const int A = 10;
         private const int B = 10;
         private const int C = 9;
+        private const double D1 = 3;
+        private const double D2 = 2;
 
 
         [TestMethod]
@@ -65,7 +66,6 @@ namespace CalculadoraTest
             CalculadoraSimples calculadora = new CalculadoraSimples();
             double resultado = calculadora.RaizQuadrada(C);
             Assert.AreEqual(resultado, 3);
-            //comment
         }
 
         [TestMethod]
@@ -75,6 +75,14 @@ namespace CalculadoraTest
         {
             CalculadoraSimples calculadora = new CalculadoraSimples();
             double resultado = calculadora.RaizQuadrada(0);
+        }
+
+        [TestMethod]
+        public void InDouble_GiveTheResult_CrrectResult()
+        {
+            CalculadoraSimples calculadora = new CalculadoraSimples();
+            double resultado = calculadora.PowMethod(D1, D2);
+            Assert.AreEqual(resultado, 27);
         }
     }
 }

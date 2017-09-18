@@ -43,5 +43,18 @@ namespace Testes_Unitarios
                 return Math.Sqrt(number);
             }
         }
+
+        public double PowMethod(double number1, double number2)
+        {
+            if (number1 == 0)
+            {
+                throw new Exception("ERRO");
+            }
+
+            else
+            {
+                return Math.Pow(number1, number1);
+            }
+        }
     }
 }
